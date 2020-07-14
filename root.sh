@@ -40,7 +40,8 @@ echo "Mise à jour des paquets déjà installés"
 apt update > /dev/null
 yes | apt upgrade 
 yes | apt autoclean
-
+echo "Nettoyage des paquets..."
+yes | apt autoremove
 echo "Vérification du paquet MintUpgrade"
 if [ $(command -v "mintupgrade") ]; then 
 	echo "Le paquet est déjà installé"

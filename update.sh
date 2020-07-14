@@ -18,7 +18,7 @@ fi
 echo "Connecté au réseau!"
 if [ -d "$HOME/woomy-update-mint" ]; then
 	echo "Suppresion du dossier $SCRIPTDIR"
-	sudo rm -rf "$HOME/woomy-update-mint"
+	sudo rm -rf $SCRIPTDIR
 fi
 mkdir $SCRIPTDIR
 cd $SCRIPTDIR

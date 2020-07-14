@@ -16,7 +16,7 @@ if [ $? != 0 ]; then
 	exit 1
 fi 
 echo "Connecté au réseau!"
-if [ -d "$HOME/woomy-update-mint" ]; then
+if [ -d $SCRIPTDIR ]; then	
 	echo "Suppresion du dossier $SCRIPTDIR"
 	sudo rm -rf $SCRIPTDIR
 fi
@@ -26,5 +26,5 @@ echo "Download ${SCRIPTDIR}/root.sh script"
 curl https://raw.githubusercontent.com/Woomy4680-exe/mint-upgrade/master/root.sh > $SCRIPTDIR/root.sh
 echo "Download ${SCRIPTDIR}/nonroot.sh script"
 curl https://raw.githubusercontent.com/Woomy4680-exe/mint-upgrade/master/nonroot.sh > $SCRIPTDIR/nonroot.sh
-sudo bash "${SCRIPTDIR}/root.sh"
-bash "${SCRIPTDIR}/nonroot.sh"
+#sudo bash "${SCRIPTDIR}/root.sh"
+#bash "${SCRIPTDIR}/nonroot.sh"
